@@ -12,7 +12,7 @@ public class ExecController {
 
     @RequestMapping("/rest")
     public Msg greeting(
-            @RequestParam(value = "cmd") String cmd, @RequestParam(value = "type", defaultValue = "syn") String type) {
+            @RequestParam(value = "cmd") String cmd, @RequestParam(value = "type", defaultValue = "asyn") String type) {
         try {
             if (cmd == null || cmd.trim().equalsIgnoreCase("")) return new Msg("cmd can't be null or ''", null, 1);
             String cmdString = "sh /data/shell/incIndex.sh";
